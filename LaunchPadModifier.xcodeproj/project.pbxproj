@@ -11,23 +11,23 @@
 		9B079DD32B33114900C91721 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B079DD22B33114900C91721 /* ContentView.swift */; };
 		9B079DD72B33114A00C91721 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B079DD62B33114A00C91721 /* Assets.xcassets */; };
 		9B079DDA2B33114A00C91721 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B079DD92B33114A00C91721 /* Preview Assets.xcassets */; };
-		9B6B65342B331195008B7B3D /* GRDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B079DE72B33116100C91721 /* GRDB.framework */; };
-		9B6B65352B331195008B7B3D /* GRDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B079DE72B33116100C91721 /* GRDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9B6B65382B331236008B7B3D /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B65372B331236008B7B3D /* AppData.swift */; };
-		9B6B653A2B331287008B7B3D /* AppItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B65392B331287008B7B3D /* AppItemView.swift */; };
+		9BA79CF62B37FCD100CDBF4E /* GRDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA79CF32B37FCCC00CDBF4E /* GRDB.framework */; };
+		9BA79CF72B37FCD100CDBF4E /* GRDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA79CF32B37FCCC00CDBF4E /* GRDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9BA79CFC2B37FF3E00CDBF4E /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA79CFB2B37FF3E00CDBF4E /* AppData.swift */; };
+		9BA79CFE2B37FF7200CDBF4E /* AppItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA79CFD2B37FF7200CDBF4E /* AppItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9B079DE62B33116100C91721 /* PBXContainerItemProxy */ = {
+		9BA79CF22B37FCCC00CDBF4E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9B079DE12B33116100C91721 /* GRDB.xcodeproj */;
+			containerPortal = 9BA79CED2B37FCCC00CDBF4E /* GRDB.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = DC3773F319C8CBB3004FCF85;
 			remoteInfo = GRDB;
 		};
-		9B079DE82B33116100C91721 /* PBXContainerItemProxy */ = {
+		9BA79CF42B37FCCC00CDBF4E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9B079DE12B33116100C91721 /* GRDB.xcodeproj */;
+			containerPortal = 9BA79CED2B37FCCC00CDBF4E /* GRDB.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 56E5D7F91B4D422D00430942;
 			remoteInfo = GRDBTests;
@@ -35,13 +35,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9B6B65362B331195008B7B3D /* Embed Frameworks */ = {
+		9BA79CF82B37FCD100CDBF4E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9B6B65352B331195008B7B3D /* GRDB.framework in Embed Frameworks */,
+				9BA79CF72B37FCD100CDBF4E /* GRDB.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,9 +55,9 @@
 		9B079DD62B33114A00C91721 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B079DD92B33114A00C91721 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9B079DDB2B33114A00C91721 /* LaunchPadModifier.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LaunchPadModifier.entitlements; sourceTree = "<group>"; };
-		9B079DE12B33116100C91721 /* GRDB.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GRDB.xcodeproj; path = "../../Downloads/GRDB.swift-6.23.0/GRDB.xcodeproj"; sourceTree = "<group>"; };
-		9B6B65372B331236008B7B3D /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppData.swift; path = ../../TestSqlite/TestSqlite/AppData.swift; sourceTree = "<group>"; };
-		9B6B65392B331287008B7B3D /* AppItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppItemView.swift; path = ../../TestSqlite/TestSqlite/AppItemView.swift; sourceTree = "<group>"; };
+		9BA79CED2B37FCCC00CDBF4E /* GRDB.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GRDB.xcodeproj; path = "../../../Downloads/GRDB.swift-6.23.0/GRDB.xcodeproj"; sourceTree = "<group>"; };
+		9BA79CFB2B37FF3E00CDBF4E /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		9BA79CFD2B37FF7200CDBF4E /* AppItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B6B65342B331195008B7B3D /* GRDB.framework in Frameworks */,
+				9BA79CF62B37FCD100CDBF4E /* GRDB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +75,7 @@
 		9B079DC42B33114900C91721 = {
 			isa = PBXGroup;
 			children = (
-				9B079DE12B33116100C91721 /* GRDB.xcodeproj */,
+				9BA79CED2B37FCCC00CDBF4E /* GRDB.xcodeproj */,
 				9B079DCF2B33114900C91721 /* LaunchPadModifier */,
 				9B079DCE2B33114900C91721 /* Products */,
 				9B6B65312B331195008B7B3D /* Frameworks */,
@@ -93,13 +93,13 @@
 		9B079DCF2B33114900C91721 /* LaunchPadModifier */ = {
 			isa = PBXGroup;
 			children = (
-				9B6B65372B331236008B7B3D /* AppData.swift */,
-				9B6B65392B331287008B7B3D /* AppItemView.swift */,
 				9B079DD02B33114900C91721 /* LaunchPadModifierApp.swift */,
 				9B079DD22B33114900C91721 /* ContentView.swift */,
 				9B079DD62B33114A00C91721 /* Assets.xcassets */,
 				9B079DDB2B33114A00C91721 /* LaunchPadModifier.entitlements */,
 				9B079DD82B33114A00C91721 /* Preview Content */,
+				9BA79CFB2B37FF3E00CDBF4E /* AppData.swift */,
+				9BA79CFD2B37FF7200CDBF4E /* AppItemView.swift */,
 			);
 			path = LaunchPadModifier;
 			sourceTree = "<group>";
@@ -112,20 +112,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		9B079DE22B33116100C91721 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9B079DE72B33116100C91721 /* GRDB.framework */,
-				9B079DE92B33116100C91721 /* GRDBTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		9B6B65312B331195008B7B3D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BA79CEE2B37FCCC00CDBF4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BA79CF32B37FCCC00CDBF4E /* GRDB.framework */,
+				9BA79CF52B37FCCC00CDBF4E /* GRDBTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +138,7 @@
 				9B079DC92B33114900C91721 /* Sources */,
 				9B079DCA2B33114900C91721 /* Frameworks */,
 				9B079DCB2B33114900C91721 /* Resources */,
-				9B6B65362B331195008B7B3D /* Embed Frameworks */,
+				9BA79CF82B37FCD100CDBF4E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,8 +177,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9B079DE22B33116100C91721 /* Products */;
-					ProjectRef = 9B079DE12B33116100C91721 /* GRDB.xcodeproj */;
+					ProductGroup = 9BA79CEE2B37FCCC00CDBF4E /* Products */;
+					ProjectRef = 9BA79CED2B37FCCC00CDBF4E /* GRDB.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -189,18 +189,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9B079DE72B33116100C91721 /* GRDB.framework */ = {
+		9BA79CF32B37FCCC00CDBF4E /* GRDB.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = GRDB.framework;
-			remoteRef = 9B079DE62B33116100C91721 /* PBXContainerItemProxy */;
+			remoteRef = 9BA79CF22B37FCCC00CDBF4E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9B079DE92B33116100C91721 /* GRDBTests.xctest */ = {
+		9BA79CF52B37FCCC00CDBF4E /* GRDBTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = GRDBTests.xctest;
-			remoteRef = 9B079DE82B33116100C91721 /* PBXContainerItemProxy */;
+			remoteRef = 9BA79CF42B37FCCC00CDBF4E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -224,8 +224,8 @@
 			files = (
 				9B079DD32B33114900C91721 /* ContentView.swift in Sources */,
 				9B079DD12B33114900C91721 /* LaunchPadModifierApp.swift in Sources */,
-				9B6B65382B331236008B7B3D /* AppData.swift in Sources */,
-				9B6B653A2B331287008B7B3D /* AppItemView.swift in Sources */,
+				9BA79CFC2B37FF3E00CDBF4E /* AppData.swift in Sources */,
+				9BA79CFE2B37FF7200CDBF4E /* AppItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +355,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = LaunchPadModifier/LaunchPadModifier.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -385,6 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = LaunchPadModifier/LaunchPadModifier.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
