@@ -29,6 +29,10 @@ struct ContentView: View {
     
     @State var alertMessage = ""
     
+    @State var isNameEditWindowShow = false
+    
+    @State var selectedName = ""
+    
     
     var body: some View {
         ZStack {
@@ -137,10 +141,55 @@ struct ContentView: View {
                                     }
                                 }))
                         }
+                        HStack {
+                            Spacer()
+                            Button {
+                                isWindowsPop = false
+                            } label: {
+                                Label("关闭", systemImage: "arrow.down.right.and.arrow.up.left")
+                            }
+                            Spacer()
+                        }
                     }
-                    .frame(height: 450, alignment: .top)
                 }
+                .frame(height: 450, alignment: .center)
             }
+        }
+        .sheet(isPresented: $isNameEditWindowShow) {
+            VStack {
+                HStack {
+                    Text("APP名称：")
+                    TextField("APP名称", text: $selectedName)
+                }.padding(50)
+                Spacer()
+                Button {
+                    do {
+                        let dbQueue = try DatabaseQueue(path: dbPath + "db")
+                        try dbQueue.write { db in
+                            if selectedAPP!.isGroup {
+                                try db.execute(
+                                    sql: "UPDATE groups SET title = :title WHERE item_id = :id",
+                                    arguments: ["title": selectedName, "id": selectedAPP!.itemId])
+                            } else {
+                                try db.execute(
+                                    sql: "UPDATE apps SET title = :title WHERE item_id = :id",
+                                    arguments: ["title": selectedName, "id": selectedAPP!.itemId])
+                            }
+                        }
+                        isWindowsPop = false
+                        isNameEditWindowShow = false
+                        refeshLaunchPadData()
+                        _ = runShellWithArgs("killall", "Dock")
+                    } catch {
+                        
+                    }
+                    
+                } label: {
+                    Label("重命名", systemImage: "pencil")
+                }
+                .padding(50)
+            }
+            .frame(width: 800, alignment: .top)
         }
         .alert(alertMessage, isPresented: $isShowingAlert) {
             Button("OK", role: .cancel) { }
@@ -152,7 +201,10 @@ struct ContentView: View {
     }
     
     private func renameAPP(app: AppData) {
-        
+        selectedName = app.title ?? "??"
+        selectedAPP = app
+        isWindowsPop = false
+        isNameEditWindowShow = true
     }
     
     private func deleteAPPFromDB(app: AppData) {
@@ -222,7 +274,6 @@ struct ContentView: View {
         copyFile(sourceUrl: dbPath + "db-shm", targetUrl: dbPath + "db-shm.backup")
         copyFile(sourceUrl: dbPath + "db-wal", targetUrl: dbPath + "db-wal.backup")
         print("'database.backup'")
-        _ = runShellWithArgs("sqlite3", dbPath + "db", ".backup '2132.bk'")
     }
     
     private func reloadDB() {
@@ -240,13 +291,6 @@ struct ContentView: View {
     private func deleteDBCache() {
         removeFile(sourceUrl: dbPath + "db-shm")
         removeFile(sourceUrl: dbPath + "db-wal")
-    }
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-//                modelContext.delete(items[index])
-            }
-        }
     }
     
     private func checkDBFile(path: String) {
